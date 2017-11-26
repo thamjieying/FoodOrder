@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20171124101520) do
     t.datetime "serving_datetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_id"], name: "delivery_orders_order_id_key", unique: true
   end
 
   create_table "meals", force: :cascade do |t|

@@ -5,20 +5,33 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Initialization
 
-* System dependencies
+clone and run ```bundle install```
 
-* Configuration
+* setting up database
 
-* Database creation
+run the following commands
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Database initialization
+* running Test files
 
-* How to run the test suite
+Setup the database for testing
+run the following commands
+```
+rails db:migrate RAILS_ENV=test
+rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Testing Models
+```
+rspec spec/models/order_item_spec.rb
+rspec spec/models/delivery_order_spec.rb
+rspec spec/models/meal_spec.rb
+```
 
-* Deployment instructions
-
-* ...
+Testing Orders Controller
