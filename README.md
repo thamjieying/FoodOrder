@@ -34,4 +34,9 @@ rspec spec/models/delivery_order_spec.rb
 rspec spec/models/meal_spec.rb
 ```
 
-Testing Orders Controller
+* getting JSON response
+
+- go to path: ```/order``` to see all the delivery orders
+
+- go to path: ```/orders/:order_id``` to see all the individual orders.
+<small>Note that :order_id is a string which represents the delivery id</small>

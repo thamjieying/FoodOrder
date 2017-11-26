@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = DeliveryOrder.find(params[:id])
+    @order = DeliveryOrder.find_by_order_id(params[:order_id])
     render json: { "order" => @order.as_json(only: :order_id, methods: [:delivery_date, :delivery_time],
       include: {order_items: {
         methods: [:name, :total_price], only: :quantity} })
